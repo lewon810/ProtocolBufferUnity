@@ -8,3 +8,7 @@ protoc -I=./ --csharp_out=./ ./person.proto
 </pre>
 
 出力されたソースコードをUnityProject内に突っ込む
+
+# TODO
+
+- WWWで送信・受信するテスト
