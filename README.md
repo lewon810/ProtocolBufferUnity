@@ -7,7 +7,7 @@ unityでProtocolBuffer使ってデシリアライズ、シリアライズする�
 protoc -I=./ --csharp_out=./ ./person.proto
 </pre>
 
-出力されたソースコードをUnityProject内に突っ込む
+出力されたPerson.csをUnityProject内に突っ込む
 
 # TODO
 
