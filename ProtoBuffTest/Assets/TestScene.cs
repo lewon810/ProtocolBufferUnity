@@ -15,28 +15,15 @@ public class TestScene : MonoBehaviour {
 	void Start () {
         var person = new Person();
         person.Id = 1;
-        person.Name = "だいき";
+        person.Name = "宮内れんげ";
 
         //scerialize
         byte[] ouputBytes = person.ToByteArray();
 
         //descerialize
-        Person person2 = new Person();
-		person2 = Person.Parser.ParseFrom(ouputBytes);
+        Person person2 = Person.Parser.ParseFrom(ouputBytes);
 
         //log
         _label.text = person2.ToString();
-
-	}
-
-    private Person TestFunc()
-    {
-        return new Person();
-    }
-
-
-	// Update is called once per frame
-	void Update () {
-		
 	}
 }
