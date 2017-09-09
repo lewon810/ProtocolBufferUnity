@@ -1,14 +1,32 @@
 # ProtocolBufferUnity
 unityでProtocolBuffer使ってデシリアライズ、シリアライズするテスト
 
-# クラスの自動出力
+# クラスの出力
 
 <pre>
 protoc -I=./ --csharp_out=./ ./person.proto
 </pre>
 
-出力されたPerson.csをUnityProject内に突っ込む
+# Tips
+
+- 配列の定義
+
+<pre>
+repeated Person person_list = 1;
+</pre>
+
+- 他protoファイルのインポート
+
+以下をsyntaxフィールドの後に記述
+
+<pre>
+import "person.proto";
+</pre>
+
+# 受信
+
+- www.bytesをPerserに突っ込む
 
 # TODO
 
-- WWWで送信・受信するテスト
+- wwwへのPOST
